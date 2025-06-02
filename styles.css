@@ -1,0 +1,619 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+html {
+  font-size: 30px; /* вместо обычных 16px */
+}
+
+
+.hero .top-right {
+  position: absolute;
+  top: 20px;
+  right: 160px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.lang-switch {
+  background-color: #f1c40f; /* жёлтый */
+  color: #2e7d32; /* тёмно-зелёный текст */
+  border: 2px solid #2e7d32;
+  padding: 12px 24px;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lang-switch:hover {
+  background-color: #d4ac0d; /* потемнее жёлтый */
+}
+
+
+.hero .logo {
+  height: 100px;
+  cursor: pointer;
+}
+
+.hero .lang-switch {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .lang-switch:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* 🔷 Главный экран — замените 'hero.jpg' */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/Pole.jpg') center/cover no-repeat;
+  color: white; /* чтобы текст был изначально белым */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+/* Скрыть по умолчанию */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 5px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Показать при наличии класса show */
+.dropdown-content.show {
+  display: block;
+}
+.item:hover img {
+  transform: scale(1.1);
+}
+.hero .top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+}
+.video-container {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  background: black;
+}
+
+.hero .logo {
+  height: 80px; /* чуть меньше, чтобы не мешал */
+  cursor: pointer;
+}
+
+#dropdown-toggle {
+  background: linear-gradient(to right, #f7e400, #98e600);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#dropdown-toggle:hover {
+  background: linear-gradient(to right, #fff700, #6fdd00);
+}
+
+/* Кнопка */
+#dropdown-toggle {
+  background: linear-gradient(to right, #f7e400, #98e600); /* жёлто-зелёный */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#dropdown-toggle:hover {
+  background: linear-gradient(to right, #fff700, #6fdd00);
+}
+
+/* Элементы выпадающего меню */
+.lang-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.hero .text-background {
+  padding: 20px 40px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.hero .text-background h1 {
+  font-size: 3rem; /* крупный заголовок */
+}
+.hero .text-background p {
+  font-size: 2rem; /* чуть больше обычного текста */
+}
+.hero .text-background2 {
+  padding: 20px 40px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.hero .text-background2 h1 {
+  font-size: 3rem; /* крупный заголовок */
+}
+.hero .text-background2 p {
+  font-size: 2rem; /* чуть больше обычного текста */
+  color: greenyellow
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-up {
+  animation: fadeInUp 1s forwards;
+}
+
+/* ==== Этапы с фоном и карточками ==== */
+.Etaps {
+  position: relative;
+  min-height: 100vh;
+  background: url('images/len.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.Etaps .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;  /* Ограничиваем ширину контейнера */
+  padding: 0 10px;   /* Внутренние отступы, чтобы не прилипали к краям */
+  box-sizing: border-box;
+}
+
+.Etaps .item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;   /* чтобы не выходил за родителя */
+}
+
+.Etaps .item img {
+  width: 200px;       /* чуть больше, но не слишком */
+  height: auto;       /* сохраняем пропорции */
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Etaps .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.Etaps .item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Etaps .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.Etaps .item:hover img {
+  transform: scale(1.1);
+}
+/* ==== Этапы с фоном и карточками ==== */
+.Napravlenie {
+  position: relative;
+  background: url('images/Background2.webp') center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.Napravlenie .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;  /* Ограничиваем ширину контейнера */
+  padding: 0 10px;   /* Внутренние отступы, чтобы не прилипали к краям */
+  box-sizing: border-box;
+}
+
+.Napravlenie .item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;   /* чтобы не выходил за родителя */
+}
+
+.Napravlenie .item img {
+  width: 200px;       /* чуть больше, но не слишком */
+  height: auto;       /* сохраняем пропорции */
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Napravlenie .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.Napravlenie .item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Napravlenie .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.Napravlenie .item:hover img {
+  transform: scale(1.1);
+}
+/* Остальной CSS (для других секций и анимаций) */
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.section-dark {
+  background: #f9f9f9;
+  color: #333;
+}
+.section-light {
+  background: #f9f9f9;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.item {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+.item:hover {
+  transform: translateY(-5px);
+}
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Анимации вылета текста */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+.animate.delay  { animation-delay: 0.5s; }
+.animate.delay2 { animation-delay: 1s; }
+.animate.delay3 { animation-delay: 1.5s; }
+.animate.delay4 { animation-delay: 2s; }
+.animate.delay5 { animation-delay: 2.5s; }
+
+.Producty {
+  position: relative;
+  background: url('images/Background4.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.Producty .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;  /* Ограничиваем ширину контейнера */
+  padding: 0 10px;   /* Внутренние отступы, чтобы не прилипали к краям */
+  box-sizing: border-box;
+}
+
+.Producty .item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;   /* чтобы не выходил за родителя */
+}
+
+.Producty .item img {
+  width: 200px;       /* чуть больше, но не слишком */
+  height: auto;       /* сохраняем пропорции */
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Producty .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.Producty .item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Producty .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.Producty .item:hover img {
+  transform: scale(1.1);
+}
+.Kontakty {
+  position: relative;
+  background: url('images/Background3.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.Kontakty .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;  /* Ограничиваем ширину контейнера */
+  padding: 0 10px;   /* Внутренние отступы, чтобы не прилипали к краям */
+  box-sizing: border-box;
+}
+
+.Kontakty .item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;   /* чтобы не выходил за родителя */
+}
+
+.Kontakty .item img {
+  width: 200px;       /* чуть больше, но не слишком */
+  height: auto;       /* сохраняем пропорции */
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Kontakty .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.Kontakty .item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Kontakty .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.Kontakty .item:hover img {
+  transform: scale(1.1);
+}
+.Place {
+  position: relative;
+  background: url('images/Rozh.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.Place .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;  /* Ограничиваем ширину контейнера */
+  padding: 0 10px;   /* Внутренние отступы, чтобы не прилипали к краям */
+  box-sizing: border-box;
+}
+
+.Place .item {
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;   /* чтобы не выходил за родителя */
+}
+
+.Place .item img {
+  width: 200px;       /* чуть больше, но не слишком */
+  height: auto;       /* сохраняем пропорции */
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Place .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.Place .item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Наведение — увеличиваем всю карточку и немного картинку */
+.Place .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.Place .item:hover img {
+  transform: scale(1.1);
+}
+
+
